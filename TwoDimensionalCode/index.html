@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jquery生成二维码</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="description" content="">
+        
+        <script type="text/javascript" src="jquery-3.1.0.min.js"></script> 
+        <script type="text/javascript" src="jquery.qrcode.min.js"></script>
+    </head>
+    <body ng-app="app" ng-strict-di ng-cloak>
+        <h1>jquery生成二维码</h1>
+        <div id="code"></div> 
+        <script type="text/javascript">
+            //$('#code').qrcode("http://www.baidu.com"); //任意字符串 
+
+            // $("#code").qrcode({ 
+            //     render: "table", //table方式 
+            //     width: 200, //宽度 
+            //     height:200, //高度 
+            //     text: "www.helloweba.com" //任意内容 
+            // }); 
+
+
+
+            function toUtf8(str) {    
+                var out, i, len, c;    
+                out = "";    
+                len = str.length;    
+                for(i = 0; i < len; i++) {    
+                    c = str.charCodeAt(i);    
+                    if ((c >= 0x0001) && (c <= 0x007F)) {    
+                        out += str.charAt(i);    
+                    } else if (c > 0x07FF) {    
+                        out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));    
+                        out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));    
+                        out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
+                    } else {    
+                        out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));    
+                        out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
+                    }    
+                }    
+                return out;    
+            } 
+            var str = toUtf8("钓鱼岛是中国的！"); 
+            //$('#code').qrcode(str); 
+
+            $('#code').qrcode({ 
+                render: "table", //table方式 
+                width: 200, //宽度 
+                height:200, //高度 
+                text: str //任意内容 
+            });
+
+        </script>
+    </body>
+</html>
