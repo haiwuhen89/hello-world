@@ -1,0 +1,25 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "hello-world package",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haiwuhen89/hello-world.git"
+  },
+  "keywords": [
+    "hello-world"
+  ],
+  "author": "gengmangmang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haiwuhen89/hello-world/issues"
+  },
+  "homepage": "https://github.com/haiwuhen89/hello-world#readme",
+  "devDependencies": {
+    "gulp-sass": "^2.3.2"
+  }
+}
