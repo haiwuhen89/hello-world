@@ -1,0 +1,215 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	font:12px/2 sans-serif, Arial, Verdana;
+	color: #333;
+	background-color: #efeff3;
+	width:100%;
+}
+.screen{
+	position: relative;
+    width: 100%;
+	overflow-x: hidden;
+}
+
+.mineinfo{
+	position: relative;
+    width: 100%;
+	padding-bottom: 10px;
+    background-color: #efeff3;
+	margin-bottom:70px;
+}
+
+.mineinfoblock{
+	margin-top: 9px;
+    background-color: #fff;
+	
+}
+
+.mineinfoblock:nth-child(1){
+	margin-top: 0px;
+    height: 154px;
+}
+
+.mineinfohead{
+	text-align: center;
+    line-height: 1;
+    position: relative;
+    padding-top: 8px;
+}
+
+.mineinfoheadpic{
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 0px 1px #e5e5e5;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    margin: 8px auto;
+    margin-top: 0px;	
+	
+}
+.img-f{
+	border-radius: 50%;
+	width: 100%;
+    height: 100%;
+	position: relative;
+    display: block;
+    border: none;
+}
+
+.mineinfoheadname{
+	font-size: 18px;
+    text-align: center;
+	
+}
+.mineinfoheadphone{
+	color: #777; 
+    line-height: 2.2;
+	
+}
+
+.mineinfoitem{
+	margin-left: 15px;
+    height: 48px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mineinfo-icon8{
+	background-image: url("../image/8.png");
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+	
+}
+.mineinfoitem-name{
+
+    flex: 1;
+    margin-left: 12px;
+    font-size: 16px;
+}
+.mineinfoitem-arrow{
+	background-image: url("../image/arrow.png");
+    background-size: 9px 15px;
+    width: 9px;
+    height: 15px;
+    margin-right: 15px;
+}
+
+.mineinfo-icon2{
+	background-image: url("../image/2.png");
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+	
+}
+.mineinfo-icon4{
+	background-image: url("../image/4.png");
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+	
+}
+.mineinfo-icon5{
+	background-image: url("../image/5.png");
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+	
+}
+.mineinfo-icon9{
+	background-image: url("../image/9.png");
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+	
+}
+.mineinfo-icon6{
+	background-image: url("../image/6.png");
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+	
+}
+.mineinfo-icon7{
+	background-image: url("../image/7.png");
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+	
+}
+.mineinfoitem-tip{
+	margin-right: 12px;
+	color: #1b9e19 !important;
+	
+}
+
+.nav{
+	
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 61px;
+    border-top: 1px solid #DFDFDF;
+    background-color: #F7F7F7;
+}
+.nav-item{
+	-webkit-box-flex: 1;
+    flex: 1;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+	text-decoration:none;
+}
+.nav-icon{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	
+}
+.nav-home{
+	display: inline-block;
+    background-image: url("../image/home.png");
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+	
+}
+.nav-name{
+	color: #777777;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.nav-discovery{
+	display: inline-block;
+    background-image: url("../image/discovery.png");
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+}
+.nav-mine{
+	display: inline-block;
+    background-image: url("../image/mine-on.png");
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+}
