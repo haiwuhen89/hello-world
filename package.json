@@ -2,7 +2,7 @@
   "name": "hello-world",
   "version": "1.0.0",
   "description": "hello-world package",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +21,19 @@
   "homepage": "https://github.com/haiwuhen89/hello-world#readme",
   "devDependencies": {
     "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.17.5",
+    "browsersync-ssi": "^0.2.4",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-jshint": "^2.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2"
   }
 }
