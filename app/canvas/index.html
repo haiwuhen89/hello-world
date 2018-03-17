@@ -1,0 +1,152 @@
+<!--
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<canvas id="myCanvas">your browser does not support the canvas tag </canvas>
+
+<script type="text/javascript">
+
+var canvas=document.getElementById('myCanvas');
+var ctx=canvas.getContext('2d');
+ctx.fillStyle='#FFFF00';
+ctx.fillRect(0,0,100,100);
+
+</script>
+
+</body>
+</html>
+-->
+
+<html>
+  <head>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      function draw(){
+        var canvas = document.getElementById('tutorial');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+
+          ctx.fillStyle = "rgb(200,0,0)";
+	        ctx.fillRect (10, 10, 55, 50);
+
+	        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+	        ctx.fillRect (30, 30, 55, 50);
+        }
+      }
+
+      function draw() {
+			  var canvas = document.getElementById('tutorial');
+			  if (canvas.getContext) {
+			    var ctx = canvas.getContext('2d');
+
+			    ctx.fillRect(25,25,100,100);
+			    ctx.clearRect(45,45,60,60);
+			    ctx.strokeRect(50,50,50,50);
+			  }
+			}
+
+			function draw() {
+			  var canvas = document.getElementById('tutorial');
+			  if (canvas.getContext){
+			    var ctx = canvas.getContext('2d');
+
+			    ctx.beginPath();
+			    ctx.moveTo(75,50);
+			    ctx.lineTo(100,75);
+			    ctx.lineTo(100,25);
+			    ctx.fill();
+			  }
+			}
+
+			function draw() {
+			  var canvas = document.getElementById('tutorial');
+			  if (canvas.getContext){
+			    var ctx = canvas.getContext('2d');
+
+			    // 填充三角形
+			    ctx.beginPath();
+			    ctx.moveTo(25,25);
+			    ctx.lineTo(105,25);
+			    ctx.lineTo(25,105);
+			    ctx.fill();
+
+			    // 描边三角形
+			    ctx.beginPath();
+			    ctx.moveTo(125,125);
+			    ctx.lineTo(125,45);
+			    ctx.lineTo(45,125);
+			    ctx.closePath();
+			    ctx.stroke();
+			  }
+			}
+
+			function draw() {
+			  var canvas = document.getElementById('tutorial');
+			  if (canvas.getContext){
+			    var ctx = canvas.getContext('2d');
+
+			    for(var i=0;i<4;i++){
+			      for(var j=0;j<3;j++){
+			        ctx.beginPath();
+			        var x              = 25+j*50;               // x 坐标值
+			        var y              = 25+i*50;               // y 坐标值
+			        var radius         = 20;                    // 圆弧半径
+			        var startAngle     = 0;                     // 开始点
+			        var endAngle       = Math.PI+(Math.PI*j)/2; // 结束点
+			        var anticlockwise  = i%2==0 ? false : true; // 顺时针或逆时针
+
+			        ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+
+			        if (i>1){
+			          ctx.fill();
+			        } else {
+			          ctx.stroke();
+			        }
+			      }
+			    }
+			  }
+			}
+			function draw() {
+			  var canvas = document.getElementById('tutorial');
+			  if (canvas.getContext) {
+			    var ctx = canvas.getContext('2d');
+
+			    // 二次贝尔赛曲线
+			    ctx.beginPath();
+			    ctx.moveTo(75,25);
+			    ctx.quadraticCurveTo(25,25,25,62.5);
+			    ctx.quadraticCurveTo(25,100,50,100);
+			    ctx.quadraticCurveTo(50,120,30,125);
+			    ctx.quadraticCurveTo(60,120,65,100);
+			    ctx.quadraticCurveTo(125,100,125,62.5);
+			    ctx.quadraticCurveTo(125,25,75,25);
+			    ctx.stroke();
+			  }
+			}
+			function draw() {
+			  var canvas = document.getElementById('tutorial');
+			  if (canvas.getContext){
+			    var ctx = canvas.getContext('2d');
+
+			    var rectangle = new Path2D();
+			    rectangle.rect(10, 10, 50, 50);
+
+			    var circle = new Path2D();
+			    circle.moveTo(125, 35);
+			    circle.arc(100, 35, 25, 0, 2 * Math.PI);
+
+			    ctx.stroke(rectangle);
+			    ctx.fill(circle);
+			  }
+			}
+    </script>
+    <style type="text/css">
+      canvas { border: 1px solid black; }
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="tutorial" width="150" height="150"></canvas>
+  </body>
+</html>
+
